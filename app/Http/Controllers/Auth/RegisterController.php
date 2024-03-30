@@ -9,13 +9,23 @@ use App\Http\Requests\UserRegistrationRequest;
 
 class RegisterController extends Controller
 {
+    /**
+     * @var UserService
+     */
     protected $userService;
 
+    /**
+     * @param UserService $userService
+     */
     public function __construct(UserService $userService)
     {
         $this->userService = $userService;
     }
 
+    /**
+     * @param UserRegistrationRequest $request
+     * @return UserResource
+     */
     public function register(UserRegistrationRequest $request)
     {
         $validatedData = $request->validated();

@@ -12,6 +12,9 @@ class UserRegistrationRequest extends BaseRequest
         return true;
     }
 
+    /**
+     * @return string[]
+     */
     public function rules()
     {
         return [
