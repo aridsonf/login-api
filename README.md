@@ -71,7 +71,7 @@ Execute os testes de integração utilizando o seguinte comando:
 ## Gerando Documentação 📄
 Para gerar a documentação, utilize o seguinte comando:
 ```bash
-./vendor/bin/sail php artisan l5-swagger:generate
+./vendor/bin/sail artisan l5-swagger:generate
 ```
 
 ## Acessando a Aplicação 🌐
