@@ -1,35 +1,31 @@
 # API - Login
 
+Esta é uma API RESTful criada com Laravel 11 e MySQL, focada em autenticação de usuários. Serve como um exemplo prático de aplicação Laravel que inclui testes de integração, abordando desde a criação até o login de usuários.
 
-A aplicação **Login** é uma API RESTful construída utilizando Laravel 11 e MySQL. O seu propósito é servir como um exemplo de aplicação Laravel que inclui testes de integração. Esta aplicação oferece funcionalidades para a criação de usuários e permite que os usuários façam login.
-## Pré-requisitos ✅
+## Pré-requisitos 
+Para utilizar, é necessário:
 
 - Composer
-- Docker
-- Docker Compose
+- Docker & Docker Compose
 - git
 
-**Importante:** Laravel Sail utiliza a porta `3306` para o MySQL por padrão. Certifique-se de que esta porta esteja disponível 🚦 ou ajuste a configuração conforme necessário.
+### Nota
+Verifique a disponibilidade da porta 3306 (padrão para MySQL no Laravel Sail) ou ajuste conforme necessário.
+
 ## Como Clonar o Projeto 📋
 
-Para clonar o projeto, abra um terminal e execute o comando a seguir:
+Para clonar o projeto, abra um terminal e execute o comando a seguir e navegue até o diretório do projeto:
 ```bash
-git clone https://github.com/aridsonf/login-api.git
-```
-
-Depois de clonar o repositório, navegue até o diretório do projeto:
-```bash
+git clone https://github.com/aridsonf/login-api.git 
 cd login-api
 ```
 
-## Configuração Inicial 🔧
+## Instalação e Configuração do Projeto usando Laravel Sail 🚀
 
 Faça uma cópia do arquivo `.env.example` e renomeie-o para `.env` para configurar o ambiente:
 ```bash
 cp .env.example .env
 ```
-
-## Instalação e Configuração do Projeto usando Laravel Sail 🚀
 
 Instale as dependências do projeto executando o comando de instalação:
 ```bash
@@ -42,17 +38,12 @@ Inicie os contêineres Docker utilizando Laravel Sail:
 ./vendor/bin/sail up --build
 ```
 
-Gere a chave da aplicação Laravel executando o seguinte comando:
+Gere a chave do Laravel e prepare o banco de dados com um único comando:
 ```bash
-./vendor/bin/sail artisan key:generate
+./vendor/bin/sail artisan key:generate && ./vendor/bin/sail artisan migrate
 ```
 
-Execute as migrações para criar as tabelas no banco de dados utilizando o seguinte comando:
-```bash
-./vendor/bin/sail artisan migrate
-```
-
-Se desejar, você pode popular o banco de dados com dados de exemplo executando as seeds utilizando o seguinte comando
+Caso queira popular o banco de dados com dados de teste, execute o seguinte comando:
 ```bash
 ./vendor/bin/sail artisan db:seed
 ```
