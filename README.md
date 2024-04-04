@@ -85,6 +85,9 @@ Para desligar o Laravel Sail, execute o seguinte comando:
 
 - **Erro**: Permissões ao executar o Sail ⚠️.
     - **Solução**: Execute os comandos do Sail com `sudo` ou adicione seu usuário ao grupo Docker.
+      
+- **Erro**: Problemas ao utilizar o composer 🛑.
+    - **Solução**: Tente utilizar o PHP 8.2 com a extenção ZIP instalada antes de executar o `composer install`.
 
 ## Contribuindo 🤝
 
